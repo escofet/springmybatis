@@ -10,6 +10,11 @@ public class Application {
 		
 		try {
 			System.out.println(myService.getCustomerById(customerId));
+			System.out.println("*********************************");
+			myService.getCustomers().forEach( c -> {
+				System.out.println(c);
+				System.out.println("------------------------------");
+			});
 		} catch(Exception e) {
 			System.out.println(e.getLocalizedMessage());
 		}
